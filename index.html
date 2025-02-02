@@ -1,68 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Магзин спортивной одежды</title>
 </head>
-<body>
-    <header>
-        <img src="images/logo.jpg" alt="logo">
-        <h2>The malaka</h2>
-        <nav>
-            <ul>
-                <li>Top</li>
-                <li>For everuone</li>
-                <li>Benefit</li>
-                <li>Preview</li>
-                <li>Penulis</li>
+    <body>
+        <header class="header">
+            <nav class="header__menu">
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Женщинам</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Мужчинам</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Детям</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Поиск</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Избранное</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">Корзина</a>
+                    </li>
+                </ul>
+
+            </nav>
+            <h1 class="title">SportEra</h1>
+            <a class="button" href="login.html">Вход</a>
+            <section>
+                <form action="/">
+                    <h1 class="tittle">Вход в личный кабинет</h1>
+                    <input type="tel" name="phone" placeholder="Номер телефона" required>
+                    <input type="password" name="password" placeholder="Пароль" required>
+                    <button class="button">Войти</button>
+                </form>
+            </section>
+        </header>
+        <main class="main">
+            <section class="discounts">
+                <ul class="discounts__list">
+                    <li class="discounts__item">
+                        <img class="discounts__img" src="images/gigi-hadid-reebok-01.webp" width="700" height="400">
+
+                    </li>
+                    <li class="discounts__item">
+                        <img class="discounts__img" src="images/i.webp" width="700" height="400">
+
+                    </li>
+                    <li class="discounts__item">
+                        <img class="discounts__img" src="images/image.png" width="400" height="700">
+
+                    </li>
+                    <li class="discounts__item">
+                        <img class="discounts__img" src="images/i (1).webp" width="600" height="700">
+                    </li>
+                </ul>
+
+            </section>
+            <section class="category">
+                <ul class="category__list">
+                    <li class="category__item">
+                        <img class="category__img" src="images/image-2.png" width="700" height="600">
+                        <h2 class="category__tittle">Женская одежда</h2>
+                        <p>Более 300 моделей</p>
+                        <a class="category__link" href="#">В каталог</a>
+
+                    </li>
+                    <li class="category__item">
+                        <img class="category__img" src="images/image-3.png" width="700" height="500">
+                        <h2 class="category__tittle">Мужская одежда</h2>
+                        <p>Более 150 моделей</p>
+                        <a class="category__link" href="#">В каталог</a>
+
+                    </li>
+                </ul>
+                
+            </section>
+            <section class="best-seller">
+                <div class="best-seller__list">
+                    <h2 class="best-seller__tittle">Хиты продаж</h2>
+                    <a class="best-seller__link" href="#" target="_blank">Для нее</a>
+                    <a class="best-seller__link" href="#" target="_blank">Для него</a>
+                </div>
+                <ul class="best-seller__list">
+                    <li class="best-seller__item item-best-seller">
+                        <a class="item-best-seller__link" href="#" target="_blank"><img src="images/image-5.png" width="400" height="700"></a>
+                        <h3 class="item-best-seller__tittle">Куртка горнолыжная</h3>
+                        <p>черный + 3 цвета</p>
+                        <span>28 000 P</span>
+
+                    </li>
+                    <li class="best-seller__item item-best-seller">
+                        <a class="item-best-seller__link" href="#" target="_blank"><img src="images/image-6.png" width="400" height="700"></a>
+                        <h3 class="item-best-seller__tittle">Брюки общеспортивные эластичные</h3>
+                        <p>черный</p>
+                        <span>9 300 P</span>
+                    </li>
+                    <li class="best-seller__item item-best-seller">
+                        <a class="item-best-seller__link" href="#" target="_blank"><img src="images/image-4.png" width="400" height="700"></a>
+                        <h3 class="item-best-seller__tittle">Брюки горнолыжные</h3>
+                        <p>черный</p>
+                        <span>17 000 P</span>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <footer class="footer">
+            <p>Сайт разработан Любых Кариной группа СТ-24</p>
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <h3 class="footer__tittle">Контактная информация<h3>
+                        <p>8 (800) *** ** **</p>
+                </li>
+                <li class="footer__item">
+                    <h3 class="footer__tittle">Помощь</h3>
+                    <a class="footer__link" href="#">Доставка и оплата</a>
+                    <a class="footer__link" href="#">Правила возврата</a>
+                    <a class="footer__link" href="#">Бонусная программа</a>
+                </li>
+                <li class="footer__item">
+                    <h3 class="footer__tittle">Правовая информация</h3>
+                    <a class="footer__link" href="#">Политика конфиденциальности</a>
+                    <a class="footer__link" href="#">Пользовательское соглашение</a>
+                </li>
+                <section class="socials">
+                    <ul class="socials__list">
+                        <li class="socials__item">
+                            <a class="socials__link" href="#" target="_blank"><img src="images/image-7.png" width="30" height="30"></a></li>
+                        <li class="socials__item">
+                            <a class="socials__link" href="#" target="_blank"><img src="images/image-8.png" width="30" height="30"></a></li>
+                    </ul>
+                </section>
             </ul>
-        </nav>
-        <a href="">Dowmload</a>
-
-    </header>
-    <main>
-        <section>
-            <h1>Sebuah framework Css </h1>
-            <p>Buku in akan mangajarkan kamu konsep</p>
-            <div>
-                <a href="">Beli Sekarang</a>
-                <h3>Sudah Terjual<br>501,234+</h3>
-            </div>
-        </section>
-        <section>
-            <h2>Techology yang dunakan</h2>
-            <div>
-                <img src="images/icon1.png" alt="иконка 1">
-                <img src="icon1.png" alt="иконка 2">
-                <img src="icon1.png" alt="иконка 3">
-            </div>
-        </section>
-
-        <p>---------------------------------</p>
-        <h1>Заголовок 1</h1>
-        <h2>Заголовок 2</h2>
-        <p>Текст 1 абзаца</p>
-        <p>Текст 2 абзаца</p>
-        <p>Текст 3 абзаца</p>
-        <h2>Маркированный список</h2>
-        <ul>
-            <li>Пункт 1 маркированного списка</li>
-            <li>Пункт 2 маркированного списка</li>
-            <li>Пункт 3 маркированного списка</li>
-        </ul>
-        <h2>Пример нумированного списка</h2>
-        <ol>
-            <li>Пункт 1 нумерованного списка</li>
-            <li>Пункт 2 нумерованного списка</li>
-            <li>Пункт 3 нумерованного списка</li>
-        </ol>
-        <a href="marsu.ru">Сайт МарГу</a>
-
-    </main>
-    <footer>
-
-    </footer>
-
-</body>
-</html>
+        </footer>
+    </body>
