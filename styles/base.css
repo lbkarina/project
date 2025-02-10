@@ -50,9 +50,9 @@ text-decoration: none;
     font-size: 18px;
     font-weight: 600;
     line-height: 28px;
-    color: #fdb100;
+    color: #010a0ce7;
     
-    border: 1px solid #fdb100;
+    border: 1px solid #086e83;
     border-radius: 16px;
     background-color: transparent;
     
@@ -62,7 +62,7 @@ text-decoration: none;
 .button--accent {
     color: #ffffff;
     
-    background-color: #fdb100;
+    background-color: #1eb1d6ec;
 }
 
 .button--link {
