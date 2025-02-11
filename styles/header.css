@@ -1,6 +1,6 @@
 .menu {
-    margin: 5px;
-    padding: 15px;
+    margin: 10px;
+    padding: 25px;
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
@@ -8,7 +8,7 @@
 
 .menu__link {
     display: block;
-    padding: 5px;
+    padding: 20px;
     margin: 10px;
     background-color: rgb(185, 214, 237);
     color: rgb(14, 13, 13);
@@ -23,4 +23,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.title{
+    flex-grow: 1;
+    text-align: center;
 }
