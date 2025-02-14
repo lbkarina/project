@@ -13,25 +13,22 @@
                 <ul class="menu">
                     <li class="menu__item"><a class="menu__link" href="#">Женщинам</a></li>
                     <li class="menu__item"><a class="menu__link" href="#">Мужчинам</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">Детям</a></li>
                 </ul>
             </nav>
             <h1 class="title">SportEra</h1>
             <ul class="menu">
-                <li class="menu__item"><a class="menu__link" href="#" target="_blank"><img src="images/images-l.svg" width="30" height="30" alt="Поиск"></a></li>
+                <li class="menu__item"><a class="menu__link" href="#" target="_blank"><img src="images/images-l.svg" width="20" height="20" alt="Поиск"></a></li>
                 <li class="menu__item"><a class="menu__link" href="#" target="_blank"><img src="images/images-love.png" width="20" height="20" alt="Избранное"></a></li>
-                <li class="menu__item"><a class="menu__link" href="#" target="_blank"><img src="images/images-s.png" width="30" height="30" alt="Корзина"></a></li>
+                <li class="menu__item"><a class="menu__link" href="#" target="_blank"><img src="images/images-s.png" width="20" height="20" alt="Корзина"></a></li>
             </ul>
-            <a class="button" href="login.html">Вход</a>
+            <a class="header__button" href="login.html">Вход</a>
         </header>
         <main class="main container">
-            <section class="section">
-                <h2>Season Sale</h2>
-                <ul class="discounts">
-                    <li class="discounts__item"><img class="discounts__img" src="images/gigi-hadid-reebok-01.webp" width="700" height="400" alt="Discount Image 1"></li>
-                    <li class="discounts__item"><img class="discounts__img" src="images/i.webp" width="700" height="400" alt="Discount Image 2"></li>
-                    <li class="discounts__item"><img class="discounts__img" src="images/image.png" width="400" height="700" alt="Discount Image 3"></li>
-                    <li class="discounts__item"><img class="discounts__img" src="images/image-9.png" width="600" height="700" alt="Discount Image 4"></li>
+            <section class="section discounts">
+                <h2 style="display: none;">Season Sale</h2>
+                <ul class="discounts__list">
+                    <li class="discounts__item"><img class="discounts__img" src="images/image.png" width="700" height="400" alt="Discount Image 1"></li>
+                    <li class="discounts__item"><img class="discounts__img" src="images/images-9.jpg" width="700" height="400" alt="Discount Image 2"></li>
                 </ul>
             </section>
             <section class="section">
@@ -54,8 +51,10 @@
             <section class="section">
                 <div class="best-seller">
                     <h2 class="best-seller__tittle">Хиты продаж</h2>
-                    <a class="best-seller__link" href="#" target="_blank">Для нее</a>
-                    <a class="best-seller__link" href="#" target="_blank">Для него</a>
+                    <div class="best-seller__wrapper">
+                        <a class="best-seller__link" href="#" target="_blank">Для нее</a>
+                        <a class="best-seller__link" href="#" target="_blank">Для него</a>
+                    </div>
                 </div>
                 <ul class="best-seller__list">
                     <li class="best-seller__item item-best-seller">
@@ -84,13 +83,12 @@
             <ul class="footer__list">
                 <li class="footer__item">
                     <h3 class="footer__tittle">Контактная информация</h3>
-                        <a class="footer__link" href="#">8 (800) *** ** **</a> 
-                </li>
-                <li>
-                    <ul class="socials">
-                        <li class="socials__item"><a class="socials__link" href="#" target="_blank"><img src="images/image-7.png" width="30" height="30" alt="Соцсеть 1"></a></li>
-                        <li class="socials__item"><a class="socials__link" href="#" target="_blank"><img src="images/image-8.png" width="30" height="30" alt="Соцсеть 2"></a></li>
-                    </ul>
+                    <a class="footer__link footer__link--tel" href="tel:8800">8 (800) *** ** **</a>
+                    <div class="socials">
+                        <a class="socials__link" href="#" target="_blank"><img src="images/image-7.png" width="30" height="30" alt="Соцсеть 1"></a>
+                        <a class="socials__link" href="#" target="_blank"><img src="images/image-8.png" width="30" height="30" alt="Соцсеть 2"></a>
+                    </div> 
+
                 </li>
                 <li class="footer__item">
                     <h3 class="footer__tittle">Помощь</h3>
@@ -106,7 +104,7 @@
             </ul>
             <p>Сайт разработан Любых Кариной группа СТ-24</p>
         </footer>
-        <section class="section">
+        <section class="section" style="display: none;">
             <form class="form" action="/">
                 <h2 class="form__titte">Вход в личный кабинет</h2>
                 <input class="form__input" type="tel" name="phone" placeholder="Номер телефона" required>
