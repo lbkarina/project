@@ -13,8 +13,13 @@
     background-color: rgb(185, 214, 237);
     color: rgb(14, 13, 13);
     text-decoration: none;
+    transition:background-color 0.3s,
+    color 0.3s ;
 }
+.menu__link:hover{
+    background-color: rgb(154, 180, 201);
 
+}
 .header__title {
     font-size: 30px;
 }
@@ -28,3 +33,12 @@
     flex-grow: 1;
     text-align: center;
 }
+.header__button{
+    display: inline-block;
+     padding: 10px;
+     margin: 5px;
+     background-color: rgb(106, 127, 146);
+     color: rgb(243, 243, 243);
+     text-decoration: none;
+    }
+    
