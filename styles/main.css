@@ -80,10 +80,33 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-   
+    border-radius: 4px;
    }
 .best-seller__wrapper{
     display: flex;
     font-size: 15px;
     gap: 30px;
+
 }
+.category__img{
+    border-radius: 4px;
+}
+
+.best-seller__item {
+    border-radius: 4px;
+}
+.category__img { 
+    /*тут ваш код карточки */ 
+    transition: box-shadow 0.3s; 
+    } 
+    .category__img:hover { 
+    box-shadow: 5px 8px 16px 16px 
+    rgba(0,0,0,0.2); 
+    }
+        .best-seller__item { 
+        /*тут ваш код кнопки*/ 
+        transition: transform 0.3s; 
+        } 
+        .best-seller__item:hover { 
+        transform: scale(1.03); 
+        }

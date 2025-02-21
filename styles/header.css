@@ -15,9 +15,11 @@
     text-decoration: none;
     transition:background-color 0.3s,
     color 0.3s ;
+    border-radius: 4px;
 }
 .menu__link:hover{
     background-color: rgb(154, 180, 201);
+    
 
 }
 .header__title {
@@ -28,6 +30,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 .title{
     flex-grow: 1;
@@ -40,5 +43,16 @@
      background-color: rgb(106, 127, 146);
      color: rgb(243, 243, 243);
      text-decoration: none;
+     transition:background-color 0.3s,
+     color 0.3s ;
+     border-radius: 4px;
     }
+
+    .header__button:hover{
+        background-color: rgba(3, 35, 61, 0.801);
+    
+    }
+
+  
+       
     
