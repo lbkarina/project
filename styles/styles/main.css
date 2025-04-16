@@ -1,0 +1,149 @@
+.category__link {
+    color: #086e83;
+}
+
+.best-seller__link {
+    color: #086e83;
+    
+}
+
+.footer__link {
+    color: #011418
+}
+
+.item-best-seller__tittle {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.discounts__list {
+    display: flex;
+    padding-left: 0;
+    gap: 0px;
+}
+
+.category {
+    padding-top: 70px;
+}
+
+.best-seller__list {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+.best-seller__item{
+    background-color: aliceblue;
+    box-shadow: 1px 2px 20px 5px #d7d7d7;
+    text-align: center;
+    padding-bottom: 20px;
+    position: relative;
+
+}
+
+.best-seller__hover{
+    width: 100%;
+    height: 85%;
+    text-align: center;
+    line-height: 1.5;
+    position: absolute;
+    background: rgb(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 20px;
+}
+.category {
+    display: flex;
+    padding-left: 0;
+    gap: 20px;
+}
+.footer{
+    border-top: 1px solid hsla(0, 0%, 56.1%, .3);
+}
+.footer__list{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    
+}
+.socials{
+    padding-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+.footer__link{
+    display: flex;
+    padding-top: 20px;
+    
+}
+.footer__tittle {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+  
+}
+.footer__link--tel{
+    font-size: 24px;
+    font-weight: 600;
+}
+.best-seller{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 4px;
+   }
+.best-seller__wrapper{
+    display: flex;
+    font-size: 15px;
+    gap: 30px;
+
+}
+.category__img{
+    border-radius: 4px;
+}
+
+.best-seller__item {
+    border-radius: 4px;
+}
+.category__img { 
+    /*тут ваш код карточки */ 
+    transition: box-shadow 0.3s; 
+    } 
+    .category__img:hover { 
+    box-shadow: 5px 8px 16px 16px 
+    rgba(0,0,0,0.2); 
+    }
+        .best-seller__item { 
+        /*тут ваш код кнопки*/ 
+        transition: transform 0.3s; 
+        } 
+        .best-seller__item:hover { 
+        transform: scale(1.03); 
+        }  
+        .discounts__img {
+            min-width: 360px; /*устанавливаем минимальную ширину для каждого изображения*/
+            object-fit: cover;
+    height: 100%;
+    width: 100%;
+    max-height: 470px;
+        }
+        
+        .discounts__item {
+            width: 360px; /*устанавливаем ширину для каждого элемента*/
+            transition: 0.3s ease; /* плавное изменение отображения длительностью 0.3 секунды */
+           }
+        
+        .discounts__list {
+            border: none; /* убираем рамку у кнопки*/
+            margin-top: 20px; /*отступ сверху*/
+            cursor: pointer; /* курсор меняем на указатель */
+        }
+.discounts__button{
+    display: flex;
+    padding-left: 0;
+    gap: 20px;
+    color: #90e2f3;
+    justify-content: center;
+}
