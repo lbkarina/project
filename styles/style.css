@@ -9,3 +9,10 @@
 /* Подключение стилей относящихся к main */
 @import "main.css";
 @import "media.css";
+/* Подключение стилей отвечающих за адаптив */
+@import "adaptability.css";
+/* Подключение универсальных стилей */
+@import "typography.css";
+
+/* Подключение анимаций */
+@import "animation.css";

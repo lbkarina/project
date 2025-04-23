@@ -1,53 +1,40 @@
-/* Контейнер-обертка */
-.container {
-    max-width: 1440px;
-    margin: 0 auto;
-}
+.scroll-up {
+    position: fixed;
+    right: 50px;
+    bottom: -70px;
 
-/* Заголовки */
-.logo {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 29px;
-    color: #fdb100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
 
-     
-}
+    background-color: #1a8a99;
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
 
-/* Кнопки */
-.button {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 28px;
-    color: #fdb100;
-    
-    border: 1px solid #fdb100;
-    border-radius: 16px;
-    background-color: transparent;
-    
-    cursor: pointer;
-}
-
-.button--accent {
-    color: #ffffff;
-    
-    background-color: #fdb100;
-}
-
-.button--link {
-    text-decoration: underline;
-    text-decoration-style: dashed;
-    text-underline-offset: 8px;
-
+    border-radius: 5px;
     border: none;
-    background-color: transparent;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    z-index: 1;
+
+    cursor: pointer;
+
+    transition: background-color 0.4s, bottom 0.4s linear, opacity 0.4s, visibility 0.4s;
 }
 
-/* Формы */
-.form__field {
-    font-size: 16px;
+.scroll-up:hover,
+.scroll-up:focus {
+    background-color: rgba(23, 177, 216, 0.8);
+}
 
-    background-color: transparent;
-    border: 1px solid rgba(145, 150, 161, 0.4);
-    border-radius: 16px;
+.scroll-up--show {
+    bottom: 115px;
+
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
