@@ -107,4 +107,41 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     }
+    const headerMenu = document.querySelector('.header__menu');
+    if (headerMenu){
+        const headerList = headerMenu.querySelector('.menu');
+        const menuData = {
+            link1: {
+                link: '#',
+                title: 'Женщинам'
+            },
+            link2: {
+                link: '#',
+                title: 'Мужчинам',
+            },
+            link3: {
+                link: '#',
+                title: 'Поиск',
+            },
+            link4: {
+                link: '#',
+                title: 'Избранное',
+            },
+            link5: {
+                link:'#',
+                title: 'Корзина',
+            }
+        }
+        const createLink = (UrlLink, title) =>{
+            const link = `
+            <li class="menu__item"><a href="${UrlLink} class="menu__link">${title}</a></li>`;
+            return link;
+        }
+        for (const linkItem in menuData) {
+            const link = menuData[linkItem];
+            const linkIndex  = createLink(link.UrlLink, link.title);
+            headerList.insertAdjacentHTML('beforeend', linkIndex);
+        }
+    }
 });
+console.log('Навигационное меню создано с помощью javascript');
