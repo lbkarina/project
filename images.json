@@ -1,0 +1,18 @@
+[
+    {
+        "imageUrl": [
+            "images/изображение 1.jpg",
+            "images/изображение 2.jpg"
+        ],
+        "imageAlt": "Спорт",
+        "imageWidth": 500
+    },
+    {
+        "imageUrl":[
+            "images/изображение 3.jpg",
+            "images/изображение 4.jpg"
+        ],
+        "imageAlt": "Спорт",
+        "imageWidth":500
+    }
+]
