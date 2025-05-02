@@ -113,35 +113,122 @@ document.addEventListener("DOMContentLoaded", () => {
         const menuData = {
             link1: {
                 link: '#',
-                title: 'Женщинам'
+                title: 'Женщинам',
+                order: 1
             },
             link2: {
                 link: '#',
                 title: 'Мужчинам',
+                order: 1
             },
+            
             link3: {
                 link: '#',
-                title: 'Поиск',
+                title: '<img src="images/images-l.svg" width="20" height="20" alt="Поиск">',
+                order: 3
             },
             link4: {
                 link: '#',
-                title: 'Избранное',
+                title: '<img src="images/images-love.png" width="20" height="20" alt="Избранное">',
+                order: 3
             },
             link5: {
                 link:'#',
-                title: 'Корзина',
+                title: '<img src="images/images-s.png" width="20" height="20" alt="Корзина">',
+                order: 3
             }
         }
-        const createLink = (UrlLink, title) =>{
+        const createLink = (UrlLink, title, order) =>{
             const link = `
-            <li class="menu__item"><a href="${UrlLink} class="menu__link">${title}</a></li>`;
+            <li class="menu__item" style="order: ${order}"><a href="${UrlLink}" class="menu__link">${title}</a></li>`;
             return link;
         }
         for (const linkItem in menuData) {
             const link = menuData[linkItem];
-            const linkIndex  = createLink(link.UrlLink, link.title);
+            const linkIndex  = createLink(link.UrlLink, link.title, link.order);
             headerList.insertAdjacentHTML('beforeend', linkIndex);
         }
-    }
-});
+        const linkIndex  = `<li class="menu__item title" style="order: 2"><h1>SportEra</h1></li>`;
+            headerList.insertAdjacentHTML('beforeend', linkIndex);
+    };
 console.log('Навигационное меню создано с помощью javascript');
+const cardsImages = document.querySelector(".images");
+if (cardsImages) {
+    const cardListImages = cardsImages.querySelector(".images__list");
+
+    // Пример URL для получения данных с сервера
+    const apiURL = "images.json";
+
+    // Функция для создания карточки
+    const createCard = (imageUrl, imageAlt, ImageWidth) => {
+        // Шаблонные строки и подстановки
+        const image = `
+        <li class="images__item">
+        <img class="images__pcture" src="${imageUrl[0]} alt="${imageAlt}" width="${ImageWidth}"
+        <img class="images__pcture" src="${imageUrl[1]} alt="${imageAlt}" width="${ImageWidth}"
+        style="display: none;">
+        </li>
+        `;
+        return image;
+    };
+    // Загрузка данных с сервера
+    fetch(apiUrl)
+    .then((response) => response.jsone())
+    .then((images) => {
+        console.log(images); //Данные
+        console.log(typeof images); //Тип полученных данных
+
+        images.forEach((item) => {
+            const cardElement = createCard(
+                item.imageUrl,
+                item.imageAlt,
+                item.ImageWidth
+            );
+            cardListImages.insertAdjacentHTML("beforeend", cardElement);
+        });
+        const pictures = document.querySelectorAll(".images__picture");
+        if (pictures) {
+            // Перебираем каждое изображение
+            pictures.forEach((picture) => {
+                picture.addEventListener("click", () => {
+                    //Получаем родительский элемент (li)
+                    const parentItem = picture.parentElement;
+
+                    //Получаем все изображения в родительском элементе
+                    const parentPictures = 
+                    parentItem.querySelectorAll(".images__picture");
+
+                    //Преключаем видимость изображений
+                    parentPictures.forEach((parentPictures) => {
+                        if (parentPictures !== picture) {
+                            parentPictures.style.display = "block"; //Показывем другое изображение
+                        } else {
+                            parentPictures.style.display = "none"; //Скрываем текущее изображение
+                        }
+                    });
+                });
+            });
+        }
+    });
+};
+//Объявляем переменную preloader и сохраняем в нее блок с классом .preloader
+const preloader = document.querySelector(".preloader");
+//Объявляем переменную content и сохраняем в нее блок с классом .content
+const content = document.querySelector(".content");
+
+//проверяем существуют ли эти блоки
+if (preloader && content) {
+    // функция, которая позволяет выполнять код через определенный промежуток времени.
+    setTimeout(() => {
+       // Скрываем предзагрузчик
+       preloader.style.opacity = "0";
+       preloader.style.visibility = "hidden";
+
+       // и показываем контент
+       content.style.display = "block";
+
+       // Удаляем элемент предзагрузчика со страницы
+       preloader.remove();
+    }, 3000); // Задержка 3 секунды
+};
+});
