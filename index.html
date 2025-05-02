@@ -7,13 +7,21 @@
     <title>Магазин спортивной одежды</title>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
-</head>
 
 <body>
+    <div class="preloader">
+        <div class="loader">
+            <span class="dot1"></span>
+            <span class="dot2"></span>
+            <span class="dot3"></span>
+        </div>
+        Загрузка...
+    </div>
+    <div class="content">
     <header class="header container">
         <nav class="header__menu">
             <ul class="menu">
-                <li class="menu__item"><a class="menu__link" href="#">Женщинам</a></li>
+                <!-- <li class="menu__item"><a class="menu__link" href="#">Женщинам</a></li>
                 <li class="menu__item"><a class="menu__link" href="#">Мужчинам</a></li> 
             </ul>
         </nav>
@@ -25,7 +33,7 @@
             <li class="menu__item"><a class="menu__link" href="#" target="_blank"><img src="images/images-love.png"
                         width="20" height="20" alt="Избранное"></a></li>
             <li class="menu__item"><a class="menu__link" href="#" target="_blank"><img src="images/images-s.png"
-                        width="20" height="20" alt="Корзина"></a></li> 
+                        width="20" height="20" alt="Корзина"></a></li> -->
         </ul>
         </nav>
         <a class="header__button" href="login.html">Вход</a>
@@ -76,6 +84,13 @@
                 </li>
             </ul>
         </section>
+        <!--/ Scrollup -->
+<section class="images">
+    <h2 class="images__title">Изображения</h2>
+    <ul class="images__list">
+        <!-- Здесь будет создаваться код с использованием JSON. -->
+    </ul> 
+</section> 
         <section class="section">
             <div class="best-seller">
                 <h2 class="best-seller__tittle">Хиты продаж</h2>
@@ -85,7 +100,7 @@
                 </div>
             </div>
             <ul class="best-seller__list">
-                <!-- <li class="best-seller__item item-best-seller">
+                 <li class="best-seller__item item-best-seller">
                     <div class="best-seller__hover" hidden>
                         Горнолыжная куртка с оптимальными показателями влагозащиты и паропроницаемости. Эргономичная
                         конструкция и приталенный силуэт с рельефами, которые стройнят, обеспечивают посадку на любой
@@ -98,7 +113,7 @@
                     </div>
                     <a class="item-best-seller__link" href="#" target="_blank"><img class="item-best-seller__img"
                             src="images/image-5.png" width="400" height="700" alt="Куртка"></a>
-                    <h3 class="item-best-seller__tittle">Куртка горнолыжная</h3>
+                    <h3 class="item-best-seller__tittle">1</h3>
                     <p>черный + 3 цвета</p>
                     <span>28 000 P</span>
                     </li>
@@ -116,7 +131,7 @@
                         </div>
                         <a class="item-best-seller__link" href="#" target="_blank"><img class="item-best-seller__img"
                                 src="images/image-6.png" width="400" height="700" alt="Брюки"></a>
-                        <h3 class="item-best-seller__tittle">Брюки общеспортивные эластичные</h3>
+                        <h3 class="item-best-seller__tittle">2</h3>
                         <p>черный</p>
                         <span>9 300 P</span>
                     </li>
@@ -134,10 +149,10 @@
                         </div>
                         <a class="item-best-seller__link" href="#" target="_blank"><img class="item-best-seller__img"
                                 src="images/image-4.png" width="400" height="700" alt="Горнолыжные брюки"></a>
-                        <h3 class="item-best-seller__tittle">Брюки горнолыжные</h3>
+                        <h3 class="item-best-seller__tittle">Бе</h3>
                         <p>черный</p>
                         <span>17 000 P</span>
-                    </li> -->
+                    </li> 
             </ul>
         </section>
     </main>
@@ -189,8 +204,8 @@
             <button class="button">Зарегистрироваться</button>
         </form>
     </section>
+</div>
     <script src="scripts/script.js"></script>
-</body>
 <!-- Scrollup -->
 <button class="scroll-up" type="button" title="Наверх">
     <svg width="35px" height="35px" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -200,4 +215,6 @@
     </svg>
     <span class="visually-hidden">Наверх</span>
 </button>
-<!--/ Scrollup -->
+</body>
+
+</html>
