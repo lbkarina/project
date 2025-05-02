@@ -60,7 +60,7 @@
     padding: 20px;
     border-radius: 20px;
 }
-.category {
+.category__list {
     display: flex;
     padding-left: 0;
     gap: 20px;

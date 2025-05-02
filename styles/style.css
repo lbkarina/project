@@ -16,3 +16,9 @@
 
 /* Подключение анимаций */
 @import "animation.css";
+
+/*Подключение изображений */
+@import "images.css";
+/*Подключение для предзагрузчика*/
+@import "preloader.css";
+@import "normalize.css";
