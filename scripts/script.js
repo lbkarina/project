@@ -152,65 +152,67 @@ document.addEventListener("DOMContentLoaded", () => {
             headerList.insertAdjacentHTML('beforeend', linkIndex);
     };
 console.log('Навигационное меню создано с помощью javascript');
+
 const cardsImages = document.querySelector(".images");
-if (cardsImages) {
-    const cardListImages = cardsImages.querySelector(".images__list");
 
-    // Пример URL для получения данных с сервера
-    const apiURL = "images.json";
-
-    // Функция для создания карточки
-    const createCard = (imageUrl, imageAlt, ImageWidth) => {
-        // Шаблонные строки и подстановки
-        const image = `
-        <li class="images__item">
-        <img class="images__pcture" src="${imageUrl[0]} alt="${imageAlt}" width="${ImageWidth}"
-        <img class="images__pcture" src="${imageUrl[1]} alt="${imageAlt}" width="${ImageWidth}"
-        style="display: none;">
-        </li>
-        `;
-        return image;
-    };
-    // Загрузка данных с сервера
-    fetch(apiUrl)
-    .then((response) => response.jsone())
-    .then((images) => {
-        console.log(images); //Данные
-        console.log(typeof images); //Тип полученных данных
-
-        images.forEach((item) => {
-            const cardElement = createCard(
-                item.imageUrl,
-                item.imageAlt,
-                item.ImageWidth
-            );
-            cardListImages.insertAdjacentHTML("beforeend", cardElement);
-        });
-        const pictures = document.querySelectorAll(".images__picture");
-        if (pictures) {
-            // Перебираем каждое изображение
-            pictures.forEach((picture) => {
-                picture.addEventListener("click", () => {
-                    //Получаем родительский элемент (li)
-                    const parentItem = picture.parentElement;
-
-                    //Получаем все изображения в родительском элементе
-                    const parentPictures = 
-                    parentItem.querySelectorAll(".images__picture");
-
-                    //Преключаем видимость изображений
-                    parentPictures.forEach((parentPictures) => {
-                        if (parentPictures !== picture) {
-                            parentPictures.style.display = "block"; //Показывем другое изображение
-                        } else {
-                            parentPictures.style.display = "none"; //Скрываем текущее изображение
-                        }
-                    });
+    if (cardsImages) {
+        const cardListImages =cardsImages.querySelector(".images__list");
+        // Пример URL для получения данных с сервера
+        const apiUrl = "images.json";
+        // Функция для создания карточки
+        const createCard = (imageUrl, imageAlt, imageWidth) => {
+            // Шаблонные строки и подстановки
+            const image = `
+<li class="images__item">
+<img class="images__picture" src="${imageUrl[0]}" alt="${imageAlt}" width="$
+{imageWidth}">
+<img class="images__picture" src="${imageUrl[1]}" alt="${imageAlt}" width="$
+{imageWidth}" style="display: none;">
+</li>
+`;
+            return image;
+        };
+        // Загрузка данных с сервера
+        fetch(apiUrl)
+            .then((response) =>response.json())
+            .then((images) => {
+                console.log(images); // Данные
+                console.log(typeof images); // Тип полученных данных
+                images.forEach((item) => {
+                    const cardElement = createCard(
+                        item.imageUrl,
+                        item.imageAlt,
+                        item.imageWidth
+                    );
+                    cardListImages.insertAdjacentHTML("beforeend", cardElement);
                 });
+                //Объявляем переменную pictures и сохраняем в нее все изображения с классом images__picture;
+                const pictures = document.querySelectorAll(".images__picture");
+                if (pictures) {
+                    // Пройдемся по каждому элементу массива pictures, с помощью цикла
+                    pictures.forEach((picture) => {
+                        //добавляем обработчик события клика по изображению:
+                        picture.addEventListener("click", () => {
+                            // получаем родительский элемент текущего изображения
+                            const parentItem =picture.parentElement;
+                            // Получаем все изображения в родительском элементе, для того чтобы работать только с изображениями, которые находятся в одной карточке
+                            const parentPictures =
+                                parentItem.querySelectorAll(".images__picture");
+                            // проходимся по всем изображениям, найденным в карточке
+                            parentPictures.forEach((parentPictures) => {
+                                //проверка условия если на текущее изображение не кликали, то оставляем это изображение видимым, иначе скрываем
+                                if (parentPictures !== picture) {
+                                    parentPictures.style.display = "block"; // Показываем другое изображение
+                                } else {
+                                    parentPictures.style.display = "none"; // Скрываем текущее изображение
+                                }
+                            });
+                        });
+                    });
+                }
             });
-        }
-    });
-};
+    }
+
 //Объявляем переменную preloader и сохраняем в нее блок с классом .preloader
 const preloader = document.querySelector(".preloader");
 //Объявляем переменную content и сохраняем в нее блок с классом .content
