@@ -32,40 +32,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* 2. Создание слайдера */
-    let currentIndex = 0; //индекс карточек
-    const slider = document.querySelectorAll(".discounts__item");
-    const prevButton = document.querySelector(".discounts__left-swiper");
-    const nextButton = document.querySelector(".discounts__right-swiper");
-    const visibleCards = 3;
-    updateSlider();
-    prevButton.addEventListener("click", () => {
-        if (currentIndex > 0) {
-            currentIndex--;
-        }
-        else {
-            currentIndex = slider.length - visibleCards;
-        }
-        updateSlider();
-    });
-    nextButton.addEventListener("click", () => {
-        if (currentIndex < slider.length - visibleCards) {
-            currentIndex++;
-        }
-        else {
-            currentIndex = 0; // Переход к началу карточек
-        }
-        updateSlider();
-    });
-    function updateSlider() {
-        slider.forEach((item, index) => {
-            if (index >= currentIndex && index < currentIndex + visibleCards) {
-                item.style.display = "block";
-            }
-            else {
-                item.style.display = "none";
-            }
-        });
-    }
+    // let currentIndex = 0; //индекс карточек
+    // const slider = document.querySelectorAll(".discounts__item");
+    // const prevButton = document.querySelector(".discounts__left-swiper");
+    // const nextButton = document.querySelector(".discounts__right-swiper");
+    // const visibleCards = 3;
+    // updateSlider();
+    // prevButton.addEventListener("click", () => {
+    //     if (currentIndex > 0) {
+    //         currentIndex--;
+    //     }
+    //     else {
+    //         currentIndex = slider.length - visibleCards;
+    //     }
+    //     updateSlider();
+    // });
+    // nextButton.addEventListener("click", () => {
+    //     if (currentIndex < slider.length - visibleCards) {
+    //         currentIndex++;
+    //     }
+    //     else {
+    //         currentIndex = 0; // Переход к началу карточек
+    //     }
+    //     updateSlider();
+    // });
+    // function updateSlider() {
+    //     slider.forEach((item, index) => {
+    //         if (index >= currentIndex && index < currentIndex + visibleCards) {
+    //             item.style.display = "block";
+    //         }
+    //         else {
+    //             item.style.display = "none";
+    //         }
+    //     });
+    // }
     const bestsellerContainer = document.querySelector(".best-seller__list");
     if (bestsellerContainer) {
         const dataTitlebestseller = [
@@ -233,4 +233,65 @@ if (preloader && content) {
        preloader.remove();
     }, 3000); // Задержка 3 секунды
 };
+var swiper = new Swiper(".mySwiper", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+// Появление модального окна//
+const welcоmeButtonModal = document.querySelector(".header__button");
+const modalApplication = document.querySelector(".section__form");
+if (welcоmeButtonModal && modalApplication) {
+    welcоmeButtonModal.addEventListener("click", (e) => {
+        e.preventDefault();
+// удаляем атрибут hidden у модального окна modalApplication и модальное окно становится видимым
+      modalApplication.removeAttribute("hidden");
+    });
+}
+window.addEventListener("click", (event) => {
+    if (event.target === modalApplication) {
+        modalApplication.setAttribute("hidden", true);
+    }
 });
+//ИСПОЛЬЗОВАНИЕ LOCALSTORAGE задание 3.7
+// Объявляем переменную formApplication и помещаем в нее элемент с id "formApplication"
+const formApplication = document.querySelector("#formApplication"); 
+// Проверяем, существует ли элемент formApplication
+if (formApplication) {  
+    // Добавляем обработчик события для отправки формы
+   formApplication.addEventListener("submit", (event) => {
+     event.preventDefault(); // Предотвращаем отправку формы
+    // Объявляем переменные "username", "tel","email",   и помещаем в нее элементы с id из формы
+     const username = formApplication.querySelector("#username").value;
+     const tel = formApplication.querySelector("#tel").value;
+     const email = formApplication.querySelector("#email").value;
+
+     // Объявляем переменную modalMessage и помещаем в нее элемент для отображения сообщений о статусе заявки
+const modalMessage = dialogApplication.querySelector("#application-message");
+    
+      // Проверка длины имени пользователя
+      if (username.length < 3) {
+         modalMessage.textContent = "Имя пользователя должно содержать не менее 3 символов";
+         modalMessage.style.color = "black"; // Устанавливаем цвет сообщения об ошибке
+         return;
+      }
+    
+       // Проверка номера телефона
+      if (!/^\d{10,}$/.test(tel)) {
+          modalMessage.textContent = "Номер телефона должен содержать только цифры и быть не менее 10 символов";
+          modalMessage.style.color = "black"; // Устанавливаем цвет сообщения
+          return;
+      }
+    
+      // Здесь можно добавить отправку данных на сервер
+      modalMessage.textContent = "Заявка отправлена!";
+      modalMessage.style.color = "green"; // Устанавливаем цвет сообщения для успешной отправки
+    
+      // Записываем данные в localStorage
+      window.localStorage.setItem("username", username);
+      window.localStorage.setItem("tel", tel);
+      window.localStorage.setItem("email", email);
+});
+};
+})
