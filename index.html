@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Магазин спортивной одежды</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
+    
 
 <body>
     <div class="preloader">
@@ -39,8 +41,9 @@
         <a class="header__button" href="login.html">Вход</a>
     </header>
     <main class="main container">
-        <section class="section discounts">
+        <!-- <section class="section discounts">
             <h2 class="main__tittle" style="display: none;">Season Sale</h2>
+            <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
             <ul class="discounts__list">
                 <li class="discounts__item"><img class="discounts__img" src="images/image.png" width="700" height="400"
                         alt="Discount Image 1"></li>
@@ -66,7 +69,35 @@
                     <img src="images/icons8-стрелка-30.png" alt="Стрелка вправо" class="discounts__right-swiper">
                 </button>
             </div>
-        </section>
+        </section> -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/image.png" alt="Slide 1" class="swiper-slide-image" width="500">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/images-9.jpg" alt="Slide 2" class="swiper-slide-image" width="500">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/arc’teryx team.jpg" alt="Slide 3" class="swiper-slide-image" width="500">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/🫧 - estefunny.jpg" alt="Slide 4" class="swiper-slide-image" width="500">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/Без названия (1).jpg" alt="Slide 5" class="swiper-slide-image" width="500">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/Без названия.jpg" alt="Slide 6" class="swiper-slide-image" width="500">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/Без названия (2).jpg" alt="Slide 7" class="swiper-slide-image" width="500">
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
         <section class="section category">
             <ul class="category__list">
                 <li class="category__item">
@@ -184,14 +215,14 @@
         </ul>
         <p>Сайт разработан Любых Кариной группа СТ-24</p>
     </footer>
-    <section class="section" style="display: none;">
+    <section class="section__form">
+        <div class="application" hidden> 
         <form class="form" action="/">
             <h2 class="form__titte">Вход в личный кабинет</h2>
             <input class="form__input" type="tel" name="phone" placeholder="Номер телефона" required>
             <input class="form__input" type="password" name="password" placeholder="Пароль" required>
-            <button class="button">Войти</button>
+            <button class="welcome__button" type="submit">Войти</button>
         </form>
-
         <form class="form" action="/">
             <h2 class="form__titte">Регистрация</h2>
             <input class="form__input" type="text" name="name" placeholder="Имя" required>
@@ -201,11 +232,12 @@
                 <span>Минимум 8 символов</span>
             </div>
             <input class="form__input" type="password" name="repeat-password" placeholder="Повторите пароль" required>
-            <button class="button">Зарегистрироваться</button>
+            <button class="welcome__button" type="submit">Зарегистрироваться</button>
         </form>
+        <p id="application-message" class="application__message"></p>
+        </div>
     </section>
 </div>
-    <script src="scripts/script.js"></script>
 <!-- Scrollup -->
 <button class="scroll-up" type="button" title="Наверх">
     <svg width="35px" height="35px" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -215,6 +247,8 @@
     </svg>
     <span class="visually-hidden">Наверх</span>
 </button>
+ <script src="scripts/script.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 
-</html>
+
