@@ -13,4 +13,11 @@
     padding: 10px 30px;  /* Внутренние отступы: 10px сверху и снизу, 30px слева и справа */
      border-radius: 20px; /* скругление углов на 20px*/
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);/*тень карточки*/
+    max-height: 400px;
+    max-width: 370px;
+}
+
+.images__item img {
+    height: 100%;
+    margin: 0 auto;
 }
